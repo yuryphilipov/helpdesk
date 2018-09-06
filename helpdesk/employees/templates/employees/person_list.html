@@ -1,0 +1,15 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+    <p>Список сотрдуников</p>
+    {% if person_list %}
+    <ul>
+        {% for person in person_list %}
+        <li>
+            <a href="{{ person.get_absolute_url }}">{{ person.last_name }} {{ person.first_name }} {{ person.middle_name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>There are no persons in the base</p>
+    {% endif %}
+{% endblock %}

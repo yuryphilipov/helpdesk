@@ -1,0 +1,6 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+<span>Вы посещали сайт: {{ num_visits }} {{ times_str }}</span>
+<p><a href="{% url 'persons' %}">Сотрудники ({{ num_persons }})</a></p>
+<p>Подразделения ({{ num_departments }})</p>
+{% endblock %}
